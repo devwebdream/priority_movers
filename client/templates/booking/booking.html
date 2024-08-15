@@ -1,0 +1,24 @@
+<template name="booking">
+	<div class="row booking-panel">
+		<div class="col-sm-5 booking-left">
+			<strong>Your Estimated Minimum:</strong>
+			<div class="row">
+				<div class="col-sm-12 text-center">
+					<h1>${{totalEstimate}}<small>+HST</small></h1>
+					{{#if isLocalMove}}
+					<br>
+					{{else}}
+					<p><strong><u>Plus</u></strong> additional long distance travel time</p>
+					{{/if}}
+				</div>
+			</div>
+			<p>(Estimate based on the cost of {{movers}} movers for a minimum of {{hours}} hours, at a rate of ${{rate}}/hour{{extra}}).</p>
+			<!-- <br> -->
+			<!-- <p><em>*Please allow an extra hour for each staircase.</em></p> -->
+		</div>
+		<div class="col-sm-7 booking-right">
+			<div id="estimate-panel">{{> bookingForm}}</div>
+			<div id="confirm-panel" style="display: none;">{{> confirmForm}}</div>
+		</div>
+	</div>
+</template>

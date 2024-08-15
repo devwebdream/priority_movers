@@ -1,0 +1,24 @@
+@import "base.import.less";
+
+@images: "/img";
+
+.logo-dimensions {
+  /*width : 360px;*/
+  /*height: 87px*/
+  width: 331px;
+  height: 85px;
+}
+
+#header-logo {
+  background-image: url("@{images}/logo.png"), none;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  .logo-dimensions;
+  padding: 0px;
+  text-indent: -9999px;
+  border: none;
+}
+
+#header-logo :focus{
+  outline: none;
+}

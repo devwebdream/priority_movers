@@ -1,0 +1,74 @@
+<template name="bookingForm">
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="form-group">
+				<label for="move-date">Move Date</label>
+				<div class="input-group date" id="move-date">
+					<input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="form-group">
+				<label for="move-time">Time</label>
+				<select class="form-control" id="move-time">
+					<option>Morning</option>
+					<option>Afternoon</option>
+					<option>Evening</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="form-group">
+				<label for="move-distance">Move Area</label>
+				<select class="form-control" id="move-distance">
+					<option value="local">Local (within Ottawa)</option>
+					<option value="long">Long Distance</option>
+				</select>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="form-group move-size">
+				<label for="move-size">Move Size</label>
+				<select class="form-control" id="move-size">
+					<option value="studio">Apartment - Studio</option>
+					<option value="a1">Apartment - 1 Bedroom</option>
+					<option value="a2">Apartment - 2 to 3 Bedrooms</option>
+					<option value="h2">House - 2 to 3 Bedrooms</option>
+					<option value="h4">House - 4+ Bedrooms</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<!-- {{#unless movingWithinCity}} -->
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="form-group">
+				<label for="move-type">Type of Move</label>
+				<select class="form-control" id="move-type">
+					<option value="full">Load and Unload</option>
+					<option value="partial">Load Only</option>
+				</select>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="form-group">
+				<label for="move-truck">Do you need our truck?</label>
+				<select class="form-control" id="move-truck">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="booking-buttons">
+				<button type="button" class="btn btn-primary" id="continue">Continue</button>
+			</div>
+		</div>
+	</div>
+</template>

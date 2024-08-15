@@ -1,0 +1,38 @@
+<template name="confirmForm">
+	{{#autoForm schema=confirmFormSchema id="confirmForm" type="method" meteormethod="createBooking"}}
+	<fieldset>
+	<div class="row">
+		<div class="col-sm-6">
+			{{> afQuickField name="name"}}
+		</div>
+		<div class="col-sm-6">
+			{{> afQuickField name="phone"}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-6">
+			{{> afQuickField name="email"}}
+		</div>
+		<div class="col-sm-3">
+			{{> afQuickField name="from" placeholder="K1V 1J5"}}
+		</div>
+		<div class="col-sm-3">
+			{{> afQuickField name="to" placeholder="K1N 9J7"}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			{{> afQuickField name="details" rows=2}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="booking-buttons">
+				<button type="button" class="btn btn-primary" id="previous">Previous</button>
+				<button type="submit" class="btn btn-success" id="book-now">Book Now</button>
+			</div>
+		</div>
+	</div>
+	</fieldset>
+	{{/autoForm}}
+</template>
